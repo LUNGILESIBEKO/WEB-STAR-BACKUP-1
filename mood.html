@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindCare Hub – Mood & AI Insights</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="mood.css" />
+  </head>
+  <body>
+    <!-- SIDEBAR — Student white style -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo">MindCare Hub</div>
+        <div class="brand-sub">ACADEMIC SANCTUARY</div>
+      </div>
+
+      <div class="sidebar-avatar">
+        <div class="avatar-circle">T</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="dashboard.html">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+          </svg>
+          Dashboard
+        </a>
+        <a class="nav-item" href="#">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+          </svg>
+          Journal
+          <span class="nav-badge">14</span>
+        </a>
+        <a class="nav-item active" href="mood.html">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+          </svg>
+          Mood Tracker
+        </a>
+        <a class="nav-item" href="#">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          AI Insights
+        </a>
+        <a class="nav-item" href="#">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          Find Help
+        </a>
+        <a class="nav-item" href="crisis.html">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+            />
+            <line x1="12" y1="9" x2="12" y2="13" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+          Crisis Centre
+        </a>
+        <a class="nav-item" href="#">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          Appointments
+          <span class="nav-badge">1</span>
+        </a>
+        <a class="nav-item" href="#">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+            />
+          </svg>
+          Forum
+          <span class="nav-badge">5</span>
+        </a>
+        <a class="nav-item" href="#">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+          </svg>
+          Resources
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="crisis-alert-box">
+          <div class="crisis-alert-label">Need Immediate Help?</div>
+          <button class="crisis-call-btn" id="crisisCallBtn">
+            CALL CRISIS LINE
+          </button>
+        </div>
+        <a href="#" class="sidebar-link">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="3" />
+            <path
+              d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"
+            />
+          </svg>
+          Settings
+        </a>
+        <a href="index.html" class="sidebar-link">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            <polyline points="16 17 21 12 16 7" />
+            <line x1="21" y1="12" x2="9" y2="12" />
+          </svg>
+          Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- ═══════════════════════ MAIN ═══════════════════════ -->
+    <main class="main">
+      <!-- PAGE HEADER -->
+      <div class="page-header">
+        <div class="page-header-left">
+          <p class="page-eyebrow">DAILY REFLECTION</p>
+          <h1 class="page-title">Mood Tracker</h1>
+        </div>
+        <button class="month-picker" id="monthPicker">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#5b3ec8"
+            stroke-width="2"
+          >
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          March 2026
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#5b3ec8"
+            stroke-width="2.5"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="divider-line"></div>
+
+      <!-- ── SECTION 1: MOOD CHECK-IN ── -->
+      <div class="section-grid top-grid">
+        <!-- LEFT: mood selector card -->
+        <div class="mood-card">
+          <div class="mood-card-top">
+            <p class="mood-question">How are you feeling right now?</p>
+            <span class="session-id">SESSION ID: #8829</span>
+          </div>
+
+          <!-- Emoji row -->
+          <div class="emoji-row">
+            <button class="emoji-btn" data-score="2" data-label="STRUGGLING">
+              <span class="emoji">😢</span>
+              <span class="emoji-label">STRUGGLING</span>
+            </button>
+            <button class="emoji-btn" data-score="4" data-label="LOW">
+              <span class="emoji">😔</span>
+              <span class="emoji-label">LOW</span>
+            </button>
+            <button
+              class="emoji-btn selected"
+              data-score="6"
+              data-label="NEUTRAL"
+            >
+              <span class="emoji">😐</span>
+              <span class="emoji-label">NEUTRAL</span>
+            </button>
+            <button class="emoji-btn" data-score="8" data-label="GOOD">
+              <span class="emoji">🙂</span>
+              <span class="emoji-label">GOOD</span>
+            </button>
+            <button class="emoji-btn" data-score="10" data-label="EXCELLENT">
+              <span class="emoji">🤩</span>
+              <span class="emoji-label">EXCELLENT</span>
+            </button>
+          </div>
+
+          <!-- Precision slider -->
+          <div class="slider-section">
+            <div class="slider-header">
+              <span class="slider-label">Precision Mood Score (1-10)</span>
+              <span class="slider-value" id="sliderDisplay">6 / 10</span>
+            </div>
+            <div class="slider-track-wrap">
+              <input
+                type="range"
+                min="1"
+                max="10"
+                value="6"
+                class="mood-slider"
+                id="moodSlider"
+              />
+              <div class="slider-ticks">
+                <span>1</span><span>2</span><span>3</span><span>4</span
+                ><span>5</span> <span>6</span><span>7</span><span>8</span
+                ><span>9</span><span>10</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="log-btn" id="logBtn">LOG REFLECTION</button>
+        </div>
+
+        <!-- RIGHT: stats -->
+        <div class="stats-col">
+          <div class="stat-block">
+            <p class="stat-lbl">AVERAGE MOOD</p>
+            <div class="stat-big">7.2 <span class="stat-denom">/ 10</span></div>
+          </div>
+          <div class="stat-row-pair">
+            <div class="stat-block small">
+              <p class="stat-lbl">BEST DAY</p>
+              <p class="stat-day">March 12</p>
+            </div>
+            <div class="stat-block small">
+              <p class="stat-lbl">WORST DAY</p>
+              <p class="stat-day">March 04</p>
+            </div>
+          </div>
+          <div class="trend-card">
+            <p class="trend-eyebrow">CURRENT TREND</p>
+            <div class="trend-row">
+              <p class="trend-value">Steadily Rising</p>
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.9)"
+                stroke-width="2.5"
+              >
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                <polyline points="17 6 23 6 23 12" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider-line"></div>
+
+      <!-- ── SECTION 2: MONTHLY PROGRESSION ── -->
+      <div class="section-block">
+        <div class="section-header">
+          <h2 class="section-title">Monthly Progression</h2>
+          <div class="chart-toggle">
+            <button class="toggle-pill active" id="barBtn">BAR</button>
+            <button class="toggle-pill" id="lineBtn">LINE</button>
+          </div>
+        </div>
+
+        <div class="chart-area" id="chartArea">
+          <!-- Bar chart (default) -->
+          <div class="bar-chart" id="barChart">
+            <div class="bars-wrap">
+              <!-- bars rendered by JS -->
+            </div>
+            <div class="bar-x-labels">
+              <span>01</span><span>03</span><span>05</span><span>07</span
+              ><span>09</span> <span>11</span><span>13</span><span>15</span
+              ><span>17</span><span>19</span> <span>21</span><span>23</span
+              ><span>25</span><span>27</span>
+            </div>
+          </div>
+          <!-- Line chart (hidden by default) -->
+          <div class="line-chart" id="lineChart" style="display: none">
+            <svg
+              class="line-svg"
+              viewBox="0 0 700 200"
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#5b3ec8" stop-opacity="0.3" />
+                  <stop
+                    offset="100%"
+                    stop-color="#5b3ec8"
+                    stop-opacity="0.02"
+                  />
+                </linearGradient>
+              </defs>
+              <line
+                x1="0"
+                y1="50"
+                x2="700"
+                y2="50"
+                stroke="#e8e8f0"
+                stroke-width="1"
+                stroke-dasharray="4 4"
+              />
+              <line
+                x1="0"
+                y1="100"
+                x2="700"
+                y2="100"
+                stroke="#e8e8f0"
+                stroke-width="1"
+                stroke-dasharray="4 4"
+              />
+              <line
+                x1="0"
+                y1="150"
+                x2="700"
+                y2="150"
+                stroke="#e8e8f0"
+                stroke-width="1"
+                stroke-dasharray="4 4"
+              />
+              <path
+                d="M0,160 C50,145 80,120 120,100 C160,80 180,130 230,110 C280,90 320,60 370,45 C420,30 460,70 510,55 C550,42 620,80 700,65"
+                fill="url(#lineGrad)"
+              />
+              <path
+                d="M0,160 C50,145 80,120 120,100 C160,80 180,130 230,110 C280,90 320,60 370,45 C420,30 460,70 510,55 C550,42 620,80 700,65"
+                fill="none"
+                stroke="#5b3ec8"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="370" cy="45" r="5" fill="#5b3ec8" />
+              <circle
+                cx="700"
+                cy="65"
+                r="6"
+                fill="#5b3ec8"
+                stroke="white"
+                stroke-width="2.5"
+              />
+            </svg>
+            <div class="bar-x-labels">
+              <span>01</span><span>03</span><span>05</span><span>07</span
+              ><span>09</span> <span>11</span><span>13</span><span>15</span
+              ><span>17</span><span>19</span> <span>21</span><span>23</span
+              ><span>25</span><span>27</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider-line"></div>
+
+      <!-- ── SECTION 3: AI ANALYSIS + PATTERN OBSERVATIONS ── -->
+      <div class="section-grid bottom-grid">
+        <!-- LEFT: AI Weekly Analysis -->
+        <div class="ai-card">
+          <div class="ai-card-header">
+            <div class="ai-icon-wrap">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+            </div>
+            <h2 class="ai-title">AI Weekly Analysis</h2>
+          </div>
+
+          <p class="ai-body">
+            Our analysis indicates a significant stabilization in your emotional
+            baseline compared to the previous week. Your mood peaks correlate
+            strongly with late-night creative sessions, while dips appear linked
+            to early morning commute stressors.
+          </p>
+
+          <ul class="ai-bullets">
+            <li>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#5b3ec8"
+                stroke-width="2.5"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Consistent journaling has improved self-awareness metrics by 14%.
+            </li>
+            <li>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#5b3ec8"
+                stroke-width="2.5"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Physical activity on Tuesday and Friday directly preceded
+              "Excellent" mood logs.
+            </li>
+            <li>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#5b3ec8"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+              Recommended Action: Try mindful breathing during your 8 AM transit
+              to mitigate morning dips.
+            </li>
+          </ul>
+
+          <button class="export-btn" id="exportBtn">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#5b3ec8"
+              stroke-width="2"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <polyline points="8 12 12 8 16 12" />
+              <line x1="12" y1="16" x2="12" y2="8" />
+            </svg>
+            EXPORT CLINICAL SUMMARY (PDF)
+          </button>
+        </div>
+
+        <!-- RIGHT: Pattern Observations + Reward -->
+        <div class="patterns-col">
+          <h2 class="section-title" style="margin-bottom: 16px">
+            Pattern Observations
+          </h2>
+
+          <div class="pattern-card">
+            <div class="pattern-icon env-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#b8860b"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              </svg>
+            </div>
+            <div class="pattern-text">
+              <p class="pattern-cat">ENVIRONMENTAL</p>
+              <p class="pattern-desc">Sunny days boost activity +22%</p>
+            </div>
+          </div>
+
+          <div class="pattern-card">
+            <div class="pattern-icon sleep-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#5b3ec8"
+                stroke-width="2"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            </div>
+            <div class="pattern-text">
+              <p class="pattern-cat">SLEEP</p>
+              <p class="pattern-desc">Rest below 6h triggers "Low" logs</p>
+            </div>
+          </div>
+
+          <div class="pattern-card">
+            <div class="pattern-icon social-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#5b3ec8"
+                stroke-width="2"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="pattern-text">
+              <p class="pattern-cat">SOCIAL</p>
+              <p class="pattern-desc">High stability after Forum interaction</p>
+            </div>
+          </div>
+
+          <!-- Consistency Reward badge -->
+          <div class="reward-card">
+            <div class="reward-left">
+              <p class="reward-eyebrow">CONSISTENCY REWARD</p>
+              <h3 class="reward-title">15-Day Reflection<br />Streak</h3>
+              <p class="reward-sub">
+                You've unlocked the "Mindful Scholar" badge.
+              </p>
+            </div>
+            <div class="reward-badge-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(0,0,0,0.35)"
+                stroke-width="1.5"
+              >
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="mood.js"></script>
+  </body>
+</html>

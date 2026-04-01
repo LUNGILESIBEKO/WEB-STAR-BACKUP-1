@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindCare Hub – Community Forum</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="forum.css" />
+  </head>
+  <body>
+    <!-- ══════════════════════════════════════
+         SIDEBAR — Student white style
+    ══════════════════════════════════════ -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo">MindCare Hub</div>
+        <div class="brand-sub">ACADEMIC SANCTUARY</div>
+      </div>
+
+      <div class="sidebar-avatar">
+        <div class="avatar-circle">T</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="student-dashboard.html">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+          </svg>
+          Dashboard
+        </a>
+        <a class="nav-item" href="#">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+          </svg>
+          Journal
+          <span class="nav-badge">14</span>
+        </a>
+        <a class="nav-item" href="mood.html">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+          </svg>
+          Mood Tracker
+        </a>
+        <a class="nav-item" href="#">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          AI Insights
+        </a>
+        <a class="nav-item" href="#">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          Find Help
+        </a>
+        <a class="nav-item" href="crisis.html">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+            />
+            <line x1="12" y1="9" x2="12" y2="13" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+          Crisis Centre
+        </a>
+        <a class="nav-item" href="#">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          Appointments
+          <span class="nav-badge">1</span>
+        </a>
+        <a class="nav-item active" href="#">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+            />
+          </svg>
+          Forum
+          <span class="nav-badge">5</span>
+        </a>
+        <a class="nav-item" href="#">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+          </svg>
+          Resources
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="crisis-alert-box">
+          <div class="crisis-alert-label">Need Immediate Help?</div>
+          <button class="crisis-call-btn" id="crisisCallBtn">
+            CALL CRISIS LINE
+          </button>
+        </div>
+        <a href="#" class="sidebar-link">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="3" />
+            <path
+              d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"
+            />
+          </svg>
+          Settings
+        </a>
+        <a href="#" class="sidebar-link">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            <polyline points="16 17 21 12 16 7" />
+            <line x1="21" y1="12" x2="9" y2="12" />
+          </svg>
+          Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- ══════════════════════════════════════
+         MAIN
+    ══════════════════════════════════════ -->
+    <main class="main">
+      <!-- CRISIS TOP BANNER -->
+      <div class="crisis-top-banner">
+        <div class="crisis-top-left">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#c8002b"
+            stroke-width="2.5"
+          >
+            <path
+              d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+            />
+            <line x1="12" y1="9" x2="12" y2="13" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+          <span
+            >Immediate assistance is available 24/7 if you are in
+            distress.</span
+          >
+        </div>
+        <button class="contact-crisis-btn" id="contactCrisisBtn">
+          CONTACT CRISIS LINE
+        </button>
+      </div>
+
+      <!-- PAGE BODY -->
+      <div class="page-body">
+        <div class="forum-layout">
+          <!-- ── LEFT / MAIN COLUMN ── -->
+          <div class="forum-main">
+            <!-- Page title + meta -->
+            <div class="forum-title-row">
+              <h1 class="forum-title">Community Forum</h1>
+              <div class="forum-meta-row">
+                <span class="forum-meta-badge"
+                  >Anonymous · Moderated · Safe</span
+                >
+                <span class="forum-meta-sep">•</span>
+                <span class="peers-online">1,240 Peers Online</span>
+              </div>
+            </div>
+
+            <!-- Filters + New Post -->
+            <div class="filters-row">
+              <div class="filter-pills">
+                <button class="pill active" data-filter="all">All</button>
+                <button class="pill" data-filter="academic">Academic</button>
+                <button class="pill" data-filter="loneliness">
+                  Loneliness
+                </button>
+                <button class="pill" data-filter="career">Career</button>
+                <button class="pill" data-filter="social">Social</button>
+              </div>
+              <button class="new-post-btn" id="newPostBtn">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2.5"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+                New Post
+              </button>
+            </div>
+
+            <!-- POSTS FEED -->
+            <div class="posts-feed" id="postsFeed">
+              <!-- Post 1: Anonymous Student -->
+              <article class="post-card" data-category="academic">
+                <div class="post-header">
+                  <div class="post-author-wrap">
+                    <div class="post-avatar anon-avatar">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      >
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="post-author">Anonymous Student</div>
+                      <div class="post-meta">
+                        Posted 2 hours ago in
+                        <span class="post-category">Academic</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="post-menu-btn">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="5" cy="12" r="1" />
+                      <circle cx="12" cy="12" r="1" />
+                      <circle cx="19" cy="12" r="1" />
+                    </svg>
+                  </button>
+                </div>
+                <h2 class="post-title">
+                  Feeling like I don't belong in this Masters program
+                </h2>
+                <p class="post-body">
+                  Does anyone else feel like a total fraud? I'm halfway through
+                  my first semester and I keep waiting for my professors to
+                  realize I'm not as smart as my peers. I spend 12 hours a day
+                  in the library and still feel behind…
+                </p>
+                <div class="post-footer">
+                  <div class="post-actions">
+                    <button class="action-btn like-btn">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"
+                        />
+                        <path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
+                      </svg>
+                      42 Helpful
+                    </button>
+                    <button class="action-btn comment-btn">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                        />
+                      </svg>
+                      12 Comments
+                    </button>
+                  </div>
+                  <button class="bookmark-btn">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Post 2: Survivor2024 — SUCCESS STORY -->
+              <article class="post-card success-card" data-category="recovery">
+                <div class="post-header">
+                  <div class="post-author-wrap">
+                    <div class="post-avatar star-avatar">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      >
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="post-author">Survivor2024</div>
+                      <div class="post-meta">
+                        Posted 5 hours ago in
+                        <span class="post-category">Recovery</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="success-badge">SUCCESS STORY</span>
+                </div>
+                <h2 class="post-title">Three months without a panic attack!</h2>
+                <p class="post-body">
+                  "I used to be afraid to leave my dorm room. Today, I presented
+                  my thesis to a room full of 50 people. It gets better, I
+                  promise."
+                </p>
+                <div class="post-footer">
+                  <div class="post-actions">
+                    <button class="action-btn like-btn liked">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                        />
+                      </svg>
+                      156 Support
+                    </button>
+                    <button class="action-btn comment-btn">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                        />
+                      </svg>
+                      28 Comments
+                    </button>
+                  </div>
+                  <button class="bookmark-btn">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Post 3: FirstTimer_99 -->
+              <article class="post-card" data-category="resources">
+                <div class="post-header">
+                  <div class="post-author-wrap">
+                    <div class="post-avatar question-avatar">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="post-author">FirstTimer_99</div>
+                      <div class="post-meta">
+                        Posted 8 hours ago in
+                        <span class="post-category">Resources</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="post-menu-btn">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="5" cy="12" r="1" />
+                      <circle cx="12" cy="12" r="1" />
+                      <circle cx="19" cy="12" r="1" />
+                    </svg>
+                  </button>
+                </div>
+                <h2 class="post-title">
+                  My first experience with the campus clinic
+                </h2>
+                <p class="post-body">
+                  Was really nervous about booking an appointment, but the
+                  counselor was actually great. They didn't judge me at all for
+                  my grades dropping. If anyone is on the fence, just go for it…
+                </p>
+                <div class="post-footer">
+                  <div class="post-actions">
+                    <button class="action-btn like-btn">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"
+                        />
+                        <path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
+                      </svg>
+                      19 Helpful
+                    </button>
+                    <button class="action-btn comment-btn">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                        />
+                      </svg>
+                      5 Comments
+                    </button>
+                  </div>
+                  <button class="bookmark-btn">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Post 4: Mentor Sarah — VERIFIED PEER MENTOR -->
+              <article class="post-card mentor-card" data-category="self-care">
+                <div class="post-header">
+                  <div class="post-author-wrap">
+                    <div class="post-avatar mentor-avatar">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      >
+                        <circle cx="12" cy="8" r="6" />
+                        <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="post-author-row">
+                        <span class="post-author">Mentor Sarah</span>
+                        <span class="mentor-badge">VERIFIED PEER MENTOR</span>
+                      </div>
+                      <div class="post-meta">
+                        Posted 10 hours ago in
+                        <span class="post-category">Self-Care</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h2 class="post-title">
+                  Daily Breathing Routine for Exam Anxiety
+                </h2>
+                <p class="post-body">
+                  Try the 4-7-8 method when you sit down at your desk. Inhale
+                  for 4, hold for 7, exhale for 8. Repeat 4 times. It resets
+                  your nervous system instantly.
+                </p>
+                <!-- Audio attachment -->
+                <div class="audio-attachment">
+                  <button class="audio-play-btn" id="audioPlayBtn">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      stroke="white"
+                      stroke-width="1"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                  </button>
+                  <div class="audio-info">
+                    <div class="audio-title">Guided Meditation.mp3</div>
+                    <div class="audio-meta">3:45 · High Impact</div>
+                  </div>
+                </div>
+                <div class="post-footer">
+                  <div class="post-actions">
+                    <button class="action-btn like-btn">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"
+                        />
+                        <path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
+                      </svg>
+                      89 Helpful
+                    </button>
+                    <button class="action-btn comment-btn">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                        />
+                      </svg>
+                      14 Comments
+                    </button>
+                  </div>
+                  <button class="bookmark-btn">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
+            <!-- /posts-feed -->
+          </div>
+
+          <!-- ── RIGHT SIDEBAR ── -->
+          <aside class="forum-sidebar">
+            <!-- Search -->
+            <div class="search-box">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#7a7a9a"
+                stroke-width="2"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <input
+                type="text"
+                placeholder="Search discussions..."
+                id="searchInput"
+              />
+            </div>
+
+            <!-- Community Guidelines -->
+            <div class="forum-widget">
+              <div class="widget-title-row">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#5b3ec8"
+                  stroke-width="2"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                <h3 class="widget-title">COMMUNITY GUIDELINES</h3>
+              </div>
+              <ul class="guidelines-list">
+                <li>
+                  Keep all personal identifiers (names, IDs) hidden to maintain
+                  anonymity.
+                </li>
+                <li>
+                  Discussions about self-harm must include a trigger warning
+                  [TW].
+                </li>
+                <li>
+                  Constructive feedback only. Harassment is strictly prohibited.
+                </li>
+              </ul>
+            </div>
+
+            <!-- In Crisis Right Now? -->
+            <div class="crisis-widget">
+              <div class="crisis-widget-bar"></div>
+              <div class="crisis-widget-body">
+                <h3 class="crisis-widget-title">In Crisis Right Now?</h3>
+                <p class="crisis-widget-desc">
+                  You don't have to face this alone. These resources are
+                  confidential and free.
+                </p>
+                <div class="crisis-resource-row">
+                  <span class="crisis-resource-label">Global Helpline</span>
+                  <span class="crisis-resource-number">988</span>
+                </div>
+                <div class="crisis-resource-row">
+                  <span class="crisis-resource-label">Text Support</span>
+                  <span class="crisis-resource-number">HOME to 741741</span>
+                </div>
+                <button class="find-center-btn">FIND LOCAL CENTER</button>
+              </div>
+            </div>
+
+            <!-- Trending Topics -->
+            <div class="forum-widget">
+              <h3 class="widget-title trending-title">TRENDING TOPICS</h3>
+              <div class="trending-tags">
+                <button class="tag-pill" data-filter="academic">
+                  #ExamStress
+                </button>
+                <button class="tag-pill" data-filter="academic">
+                  #ThesisGrind
+                </button>
+                <button class="tag-pill">#SleepHygiene</button>
+                <button class="tag-pill">#FirstYear</button>
+                <button class="tag-pill">#SocialAnxiety</button>
+              </div>
+            </div>
+
+            <!-- Active Now -->
+            <div class="forum-widget">
+              <div class="active-header">
+                <h3 class="widget-title trending-title">ACTIVE NOW</h3>
+                <span class="active-dot"></span>
+              </div>
+              <div class="active-list">
+                <div class="active-item">
+                  <div class="active-avatar av1">M</div>
+                  <span class="active-name">MeditationGuide</span>
+                </div>
+                <div class="active-item">
+                  <div class="active-avatar av2">A</div>
+                  <span class="active-name">Alex_Research</span>
+                </div>
+                <div class="active-item">
+                  <div class="active-avatar av3">G</div>
+                  <span class="active-name">GradLife_Sucks</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- NEW POST MODAL -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 class="modal-title">New Post</h2>
+          <button class="modal-close" id="modalClose">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-anon-note">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#5b3ec8"
+              stroke-width="2"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            Your post will be anonymous. No personal details are stored.
+          </div>
+          <select class="modal-select" id="postCategory">
+            <option value="">Select a category…</option>
+            <option value="academic">Academic</option>
+            <option value="loneliness">Loneliness</option>
+            <option value="career">Career</option>
+            <option value="social">Social</option>
+            <option value="self-care">Self-Care</option>
+            <option value="recovery">Recovery</option>
+            <option value="resources">Resources</option>
+          </select>
+          <input
+            type="text"
+            class="modal-input"
+            id="postTitle"
+            placeholder="Post title…"
+            maxlength="100"
+          />
+          <textarea
+            class="modal-textarea"
+            id="postBody"
+            placeholder="Share what's on your mind. You are safe here…"
+            rows="5"
+          ></textarea>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-cancel" id="modalCancel">Cancel</button>
+          <button class="modal-submit" id="modalSubmit">
+            Post Anonymously
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="forum.js"></script>
+  </body>
+</html>
