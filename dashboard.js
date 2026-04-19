@@ -67,3 +67,24 @@ if (crisisBtn) {
     }
   });
 }
+
+// Set current date
+const dateEl = document.getElementById("currentDate");
+if (dateEl) {
+  const now = new Date();
+  dateEl.textContent = now.toLocaleDateString("en-GB", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+// Emoji selection
+document.querySelectorAll(".emoji-btn").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    document
+      .querySelectorAll(".emoji-btn")
+      .forEach((b) => b.classList.remove("selected"));
+    this.classList.add("selected");
+  });
+});

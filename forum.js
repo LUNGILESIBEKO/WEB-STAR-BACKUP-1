@@ -228,3 +228,37 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 });
+// Modal
+const overlay = document.getElementById("modalOverlay");
+document
+  .getElementById("newPostBtn")
+  .addEventListener("click", () => overlay.classList.add("open"));
+document
+  .getElementById("modalClose")
+  .addEventListener("click", () => overlay.classList.remove("open"));
+document
+  .getElementById("modalCancel")
+  .addEventListener("click", () => overlay.classList.remove("open"));
+overlay.addEventListener("click", (e) => {
+  if (e.target === overlay) overlay.classList.remove("open");
+});
+
+// Filter pills
+document.querySelectorAll(".pill").forEach((pill) => {
+  pill.addEventListener("click", () => {
+    document
+      .querySelectorAll(".pill")
+      .forEach((p) => p.classList.remove("active"));
+    pill.classList.add("active");
+    const filter = pill.dataset.filter;
+    document.querySelectorAll(".post-card").forEach((card) => {
+      card.style.display =
+        filter === "all" || card.dataset.category === filter ? "" : "none";
+    });
+  });
+});
+
+// Crisis btn
+document
+  .getElementById("contactCrisisBtn")
+  .addEventListener("click", () => (window.location.href = "crisis.html"));

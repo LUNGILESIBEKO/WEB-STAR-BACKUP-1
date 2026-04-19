@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script src="theme.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MindCare Hub – Student Dashboard</title>
@@ -11,22 +12,17 @@
     <link rel="stylesheet" href="dashboard.css" />
   </head>
   <body>
-    <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="sidebar-brand">
         <div class="brand-logo">MindCare Hub</div>
-        <div class="brand-sub">ACADEMIC SANCTUARY</div>
-      </div>
-
-      <div class="sidebar-avatar">
-        <div class="avatar-circle">T</div>
+        <div class="brand-sub">Academic Support</div>
       </div>
 
       <nav class="sidebar-nav">
         <a href="dashboard.html" class="nav-item active">
           <svg
-            width="18"
-            height="18"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -39,10 +35,23 @@
           </svg>
           Dashboard
         </a>
-        <a href="#" class="nav-item">
+        <a href="mood.html" class="nav-item">
           <svg
-            width="18"
-            height="18"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+          </svg>
+          Mood Tracker and AI Insights
+        </a>
+        <a href="journal.html" class="nav-item">
+          <svg
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -52,40 +61,11 @@
             <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
           </svg>
           Journal
-          <span class="nav-badge">14</span>
         </a>
-        <a href="#" class="nav-item">
+        <a href="findhelp.html" class="nav-item">
           <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-          </svg>
-          Mood Tracker
-        </a>
-        <a href="#" class="nav-item">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <circle cx="12" cy="12" r="10" />
-            <line x1="12" y1="8" x2="12" y2="12" />
-            <line x1="12" y1="16" x2="12.01" y2="16" />
-          </svg>
-          AI Insights
-        </a>
-        <a href="#" class="nav-item">
-          <svg
-            width="18"
-            height="18"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -96,10 +76,10 @@
           </svg>
           Find Help
         </a>
-        <a href="#" class="nav-item crisis-item">
+        <a href="crisis.html" class="nav-item">
           <svg
-            width="18"
-            height="18"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -110,12 +90,11 @@
             <line x1="12" y1="16" x2="12.01" y2="16" />
           </svg>
           Crisis Centre
-          <span class="crisis-dot"></span>
         </a>
-        <a href="#" class="nav-item">
+        <a href="bookings.html" class="nav-item">
           <svg
-            width="18"
-            height="18"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -126,13 +105,12 @@
             <line x1="8" y1="2" x2="8" y2="6" />
             <line x1="3" y1="10" x2="21" y2="10" />
           </svg>
-          Appointments
-          <span class="nav-badge">1</span>
+          Bookings
         </a>
-        <a href="#" class="nav-item">
+        <a href="forum.html" class="nav-item">
           <svg
-            width="18"
-            height="18"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -143,30 +121,26 @@
             />
           </svg>
           Forum
-          <span class="nav-badge">5</span>
         </a>
-        <a href="#" class="nav-item">
+        <a href="games.html" class="nav-item">
           <svg
-            width="18"
-            height="18"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="2"
           >
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+            <rect x="2" y="8" width="20" height="10" rx="3" />
+            <line x1="7" y1="13" x2="7" y2="13" />
+            <line x1="7" y1="11" x2="7" y2="15" />
+            <line x1="5" y1="13" x2="9" y2="13" />
+            <circle cx="15" cy="12" r="0.8" fill="currentColor" />
+            <circle cx="17" cy="14" r="0.8" fill="currentColor" />
           </svg>
-          Resources
+          Games
         </a>
-      </nav>
-
-      <div class="sidebar-footer">
-        <div class="crisis-alert">
-          <div class="crisis-alert-label">Need Immediate Help?</div>
-          <button class="crisis-btn">CALL CRISIS LINE</button>
-        </div>
-        <a href="#" class="sidebar-link">
+        <a href="settings.html" class="nav-item">
           <svg
             width="16"
             height="16"
@@ -182,10 +156,13 @@
           </svg>
           Settings
         </a>
-        <a href="index.html" class="sidebar-link">
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="logout.html" class="sidebar-link">
           <svg
-            width="16"
-            height="16"
+            width="15"
+            height="15"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -200,20 +177,18 @@
       </div>
     </aside>
 
-    <!-- MAIN CONTENT -->
     <main class="main">
-      <!-- TOP BAR -->
       <header class="topbar">
         <div class="topbar-left">
           <h1 class="greeting">Good day, Thabo 👋</h1>
-          <p class="date">Thursday, October 24th, 2024</p>
+          <p class="date" id="currentDate">Thursday, October 24th, 2024</p>
         </div>
         <div class="topbar-right">
           <div class="lang-selector">🌐 English (UK)</div>
-          <button class="notif-btn">
+          <button class="notif-btn" id="notifBtn">
             <svg
-              width="20"
-              height="20"
+              width="18"
+              height="18"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -223,11 +198,23 @@
               <path d="M13.73 21a2 2 0 0 1-3.46 0" />
             </svg>
           </button>
-          <div class="user-avatar">T</div>
+          <div class="user-avatar">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="rgba(255,255,255,0.9)"
+              stroke-width="2"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
         </div>
       </header>
 
-      <!-- MOOD CHECK-IN -->
+      <!-- MOOD CHECK-IN CARD -->
       <div class="mood-card">
         <div class="mood-card-left">
           <h2 class="mood-title">How are you feeling today?</h2>
@@ -243,50 +230,45 @@
           <button class="emoji-btn">😔</button>
           <button class="emoji-btn">😢</button>
           <button class="emoji-btn">😡</button>
-          <button class="emoji-btn">🤩</button>
-          <button class="emoji-btn">😰</button>
         </div>
       </div>
 
       <!-- STATS ROW -->
       <div class="stats-row">
         <div class="stat-card">
-          <div class="stat-label">JOURNAL STREAK</div>
+          <div class="stat-label">Journal Streak</div>
           <div class="stat-value">14 <span class="stat-unit">Days</span></div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">MOOD SCORE</div>
+          <div class="stat-label">Mood Score</div>
           <div class="stat-value">
             7.8 <span class="stat-trend up">↑12%</span>
           </div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">UPCOMING</div>
+          <div class="stat-label">Upcoming</div>
           <div class="stat-value">1 <span class="stat-unit">Session</span></div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">BADGES</div>
+          <div class="stat-label">Badges</div>
           <div class="stat-value">2 <span class="stat-unit">Active</span></div>
         </div>
       </div>
 
       <!-- CONTENT GRID -->
       <div class="content-grid">
-        <!-- LEFT COLUMN -->
         <div class="col-left">
-          <!-- RECENT JOURNAL ENTRIES -->
           <div class="widget">
             <div class="widget-header">
               <h3 class="widget-title">Recent Journal Entries</h3>
-              <a href="#" class="widget-action">New Entry</a>
+              <a href="journal.html" class="widget-action">New Entry</a>
             </div>
             <div class="journal-entry">
               <div class="entry-meta">YESTERDAY • 10:45 PM</div>
               <div class="entry-title">Feeling the weight of midterms</div>
               <div class="entry-preview">
                 Today was a struggle with focus. I spent four hours in the
-                library and only finished half of the reading. My anxiety is
-                peaking around the physics lab...
+                library and only finished half of the reading…
               </div>
             </div>
             <div class="journal-entry">
@@ -296,12 +278,11 @@
               </div>
               <div class="entry-preview">
                 The air was crisp and the walk helped clear my head. Note to
-                self: do this more often when the sun is out...
+                self: do this more often…
               </div>
             </div>
           </div>
 
-          <!-- PERSONAL AI INSIGHTS -->
           <div class="widget">
             <h3 class="widget-title">Personal AI Insights</h3>
             <div class="insights-grid">
@@ -331,7 +312,6 @@
             </div>
           </div>
 
-          <!-- BOTTOM ROW: APPOINTMENTS + FORUM -->
           <div class="bottom-row">
             <div class="widget">
               <h3 class="widget-title">Upcoming Appointments</h3>
@@ -347,8 +327,8 @@
                 </div>
                 <button class="appt-video">
                   <svg
-                    width="18"
-                    height="18"
+                    width="16"
+                    height="16"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -360,7 +340,6 @@
                 </button>
               </div>
             </div>
-
             <div class="widget">
               <h3 class="widget-title">Community Forum</h3>
               <div class="forum-item">
@@ -377,9 +356,7 @@
           </div>
         </div>
 
-        <!-- RIGHT COLUMN -->
         <div class="col-right">
-          <!-- WEEKLY MOOD -->
           <div class="widget">
             <h3 class="widget-title">Weekly Mood</h3>
             <div class="mood-chart">
@@ -416,12 +393,9 @@
             </div>
           </div>
 
-          <!-- NEARBY SUPPORT -->
           <div class="widget">
             <h3 class="widget-title">Nearby Support</h3>
-            <div class="map-placeholder">
-              <div class="map-dot"></div>
-            </div>
+            <div class="map-placeholder"><div class="map-dot"></div></div>
             <div class="support-list">
               <div class="support-item">
                 <span class="support-dot green"></span>
@@ -444,5 +418,24 @@
     </main>
 
     <script src="dashboard.js"></script>
+    <script>
+      const dateEl = document.getElementById("currentDate");
+      if (dateEl) {
+        dateEl.textContent = new Date().toLocaleDateString("en-GB", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+      }
+      document.querySelectorAll(".emoji-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          document
+            .querySelectorAll(".emoji-btn")
+            .forEach((b) => b.classList.remove("selected"));
+          this.classList.add("selected");
+        });
+      });
+    </script>
   </body>
 </html>

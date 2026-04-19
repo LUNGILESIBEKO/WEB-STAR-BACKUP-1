@@ -1,9 +1,11 @@
-// MindCare Hub – JavaScript
+// MindCare Hub – Landing Page JavaScript
 
-// Smooth scroll for nav links
+// ── SMOOTH SCROLL for nav anchor links ──────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    const target = document.querySelector(this.getAttribute("href"));
+    const href = this.getAttribute("href");
+    if (href === "#") return;
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: "smooth" });
@@ -11,8 +13,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Sticky nav shadow on scroll
-const nav = document.querySelector("nav");
+// ── STICKY NAV shadow on scroll ─────────────────────────────────
+const nav = document.getElementById("mainNav");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 10) {
     nav.style.boxShadow = "0 2px 20px rgba(0,0,0,0.08)";
@@ -21,32 +23,16 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Feature cards — click to go to dashboard
-document.querySelectorAll(".feature-card").forEach((card) => {
-  card.style.cursor = "pointer";
+// ── FEATURE CARDS — navigate to their respective pages ──────────
+document.querySelectorAll(".feature-card[data-href]").forEach((card) => {
   card.addEventListener("click", () => {
-    window.location.href = "dashboard.html";
+    window.location.href = card.dataset.href;
   });
 });
 
-// Footer links — click to go to dashboard
-document.querySelectorAll(".footer-col a").forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.location.href = "dashboard.html";
-  });
-});
+// ── FOOTER INTERNAL LINKS — already use real hrefs, no override needed ──
 
-// Social media icons — open in new tab (placeholders)
-document.querySelectorAll(".social-btn").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    // Replace '#' with real URLs when ready
-    alert("Social media link coming soon!");
-  });
-});
-
-// Fade-in on scroll (Intersection Observer)
+// ── FADE-IN on scroll (Intersection Observer) ───────────────────
 const fadeEls = document.querySelectorAll(
   ".feature-card, .step, .testimonial-card, .privacy-feature",
 );

@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindCare Hub – Personal Journal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="journal.css" />
+    <script src="theme.js"></script>
+  </head>
+  <body>
+    <!-- ══════════════════════ SIDEBAR ══════════════════════ -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo">MindCare Hub</div>
+        <div class="brand-sub">Academic Support</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-item">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+          </svg>
+          Dashboard
+        </a>
+        <a href="mood.html" class="nav-item">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+          </svg>
+          Mood Tracker and AI Insights
+        </a>
+        <a href="journal.html" class="nav-item active">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+          </svg>
+          Journal
+        </a>
+        <a href="findhelp.html" class="nav-item">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          Find Help
+        </a>
+        <a href="crisis.html" class="nav-item">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          Crisis Centre
+        </a>
+        <a href="bookings.html" class="nav-item">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          Bookings
+        </a>
+        <a href="forum.html" class="nav-item">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+            />
+          </svg>
+          Forum
+        </a>
+        <a href="games.html" class="nav-item">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="2" y="8" width="20" height="10" rx="3" />
+            <line x1="7" y1="13" x2="7" y2="13" />
+            <line x1="7" y1="11" x2="7" y2="15" />
+            <line x1="5" y1="13" x2="9" y2="13" />
+            <circle cx="15" cy="12" r="0.8" fill="currentColor" />
+            <circle cx="17" cy="14" r="0.8" fill="currentColor" />
+          </svg>
+          Games
+        </a>
+        <a href="settings.html" class="nav-item">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="3" />
+            <path
+              d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"
+            />
+          </svg>
+          Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="index.html" class="sidebar-link">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            <polyline points="16 17 21 12 16 7" />
+            <line x1="21" y1="12" x2="9" y2="12" />
+          </svg>
+          Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- ══════════════════════ MAIN ══════════════════════ -->
+    <main class="main">
+      <div class="page-body">
+        <!-- PAGE HEADER -->
+        <div class="page-header">
+          <div class="page-header-left">
+            <h1 class="page-title">Personal Journal</h1>
+            <p class="page-sub">Reflect on your day in a quiet space.</p>
+          </div>
+          <div class="page-header-right">
+            <button class="lang-btn">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+              English
+            </button>
+            <button class="notif-btn">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+              </svg>
+            </button>
+            <div class="user-avatar-sm">T</div>
+          </div>
+        </div>
+
+        <div class="divider-pink"></div>
+
+        <!-- JOURNAL + HISTORY GRID -->
+        <div class="journal-grid">
+          <!-- ── LEFT: EDITOR ── -->
+          <div class="editor-col">
+            <div class="journal-card">
+              <div class="journal-card-header">
+                <div>
+                  <h2 class="journal-heading">My Journal</h2>
+                  <p class="journal-date" id="journalDate">
+                    Monday, 17 March 2026
+                  </p>
+                </div>
+                <div class="streak-badge">🔥 14-day streak</div>
+              </div>
+
+              <div class="mood-section">
+                <p class="mood-label">HOW ARE YOU FEELING TODAY?</p>
+                <div class="mood-emoji-row">
+                  <button class="mood-emoji-btn" data-mood="struggling">
+                    😔
+                  </button>
+                  <button class="mood-emoji-btn" data-mood="neutral">😐</button>
+                  <button class="mood-emoji-btn selected" data-mood="okay">
+                    😊
+                  </button>
+                  <button class="mood-emoji-btn" data-mood="good">😄</button>
+                  <button class="mood-emoji-btn" data-mood="excellent">
+                    🤩
+                  </button>
+                </div>
+              </div>
+
+              <div class="editor-wrap">
+                <textarea
+                  class="journal-textarea"
+                  id="journalTextarea"
+                  placeholder="Start writing your thoughts..."
+                ></textarea>
+                <div class="word-count-row">
+                  <span class="word-count" id="wordCount">0 words</span>
+                </div>
+              </div>
+
+              <button class="submit-btn" id="submitBtn">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2.5"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+                Submit Entry
+              </button>
+            </div>
+
+            <!-- AI Sentiment Insights -->
+            <div class="ai-insights-card">
+              <div class="ai-insights-header">
+                <div class="ai-icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                  </svg>
+                </div>
+                <h3 class="ai-insights-title">AI Sentiment Insights</h3>
+              </div>
+
+              <div class="sentiment-tags" id="sentimentTags">
+                <span class="sentiment-tag hopeful">HOPEFUL</span>
+                <span class="sentiment-tag reflective">REFLECTIVE</span>
+              </div>
+
+              <div class="insights-grid">
+                <div class="alert-box" id="alertBox">
+                  <div class="alert-box-header">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#c8002b"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                      />
+                      <line x1="12" y1="9" x2="12" y2="13" />
+                      <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+                    <span class="alert-box-title">Anxiety detected</span>
+                  </div>
+                  <p class="alert-box-desc">
+                    Phrases in your third paragraph suggest elevated stress
+                    levels.
+                  </p>
+                </div>
+
+                <div class="recommendation-box">
+                  <p class="rec-eyebrow">RECOMMENDATION</p>
+                  <p class="rec-text">
+                    Your entry mentions academic pressure. Consider trying the
+                    5-minute
+                    <span class="rec-link" id="boxBreathingLink"
+                      >Box Breathing</span
+                    >
+                    exercise before your next lecture.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── RIGHT: HISTORY + INSIGHT ── -->
+          <div class="history-col">
+            <div class="history-card">
+              <h3 class="history-title">Journal History</h3>
+
+              <div class="mini-calendar">
+                <div class="cal-header">
+                  <button class="cal-nav" id="calPrev">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                  </button>
+                  <span class="cal-month" id="calMonth">March 2026</span>
+                  <button class="cal-nav" id="calNext">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="cal-grid">
+                  <span class="cal-day-label">S</span>
+                  <span class="cal-day-label">M</span>
+                  <span class="cal-day-label">T</span>
+                  <span class="cal-day-label">W</span>
+                  <span class="cal-day-label">T</span>
+                  <span class="cal-day-label">F</span>
+                  <span class="cal-day-label">S</span>
+                  <span class="cal-day muted">14</span>
+                  <span class="cal-day muted">15</span>
+                  <span class="cal-day muted">16</span>
+                  <span class="cal-day today">17</span>
+                  <span class="cal-day">18</span>
+                  <span class="cal-day">19</span>
+                  <span class="cal-day">20</span>
+                </div>
+              </div>
+
+              <div class="history-entries" id="historyEntries">
+                <div
+                  class="history-entry"
+                  data-date="Mar 16, 2026"
+                  data-mood="😊"
+                >
+                  <div class="entry-left-bar green-bar"></div>
+                  <div class="entry-body">
+                    <div class="entry-meta-row">
+                      <span class="entry-date">Mar 16, 2026</span>
+                      <span class="entry-mood">😊</span>
+                    </div>
+                    <div class="entry-title">Finding Balance</div>
+                    <div class="entry-preview">
+                      Today I managed to finish my thesis draft early…
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="history-entry"
+                  data-date="Mar 15, 2026"
+                  data-mood="😊"
+                >
+                  <div class="entry-left-bar yellow-bar"></div>
+                  <div class="entry-body">
+                    <div class="entry-meta-row">
+                      <span class="entry-date">Mar 15, 2026</span>
+                      <span class="entry-mood">😊</span>
+                    </div>
+                    <div class="entry-title">Quiet Afternoon</div>
+                    <div class="entry-preview">
+                      The rain kept me indoors. Spent most of the time reading…
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="history-entry"
+                  data-date="Mar 14, 2026"
+                  data-mood="😔"
+                >
+                  <div class="entry-left-bar red-bar"></div>
+                  <div class="entry-body">
+                    <div class="entry-meta-row">
+                      <span class="entry-date">Mar 14, 2026</span>
+                      <span class="entry-mood">😔</span>
+                    </div>
+                    <div class="entry-title">Exam Stress</div>
+                    <div class="entry-preview">
+                      Feeling overwhelmed by the sheer volume of material…
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="weekly-insight-card">
+              <div class="insight-header">
+                <h3 class="insight-title">Weekly Insight</h3>
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#e8e8f0"
+                  stroke-width="1.5"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+              <p class="insight-text">
+                Your journaling consistency is up
+                <strong class="insight-highlight">24%</strong>
+                this week. You seem to feel more positive during the mornings
+                when you mention "exercise" or "nature".
+              </p>
+              <div class="insight-chart">
+                <div class="insight-bars">
+                  <div class="i-bar" style="height: 45%"></div>
+                  <div class="i-bar" style="height: 60%"></div>
+                  <div class="i-bar" style="height: 40%"></div>
+                  <div class="i-bar" style="height: 70%"></div>
+                  <div class="i-bar" style="height: 55%"></div>
+                  <div class="i-bar highlight-bar" style="height: 90%"></div>
+                  <div class="i-bar" style="height: 50%"></div>
+                </div>
+                <div class="insight-chart-labels">
+                  <span>M</span><span>T</span><span>W</span><span>T</span
+                  ><span>F</span><span>S</span><span>S</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="journal.js"></script>
+  </body>
+</html>
