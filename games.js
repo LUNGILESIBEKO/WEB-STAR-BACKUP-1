@@ -1,7 +1,3 @@
-// ══════════════════════════════════════════
-// MindCare Hub – Games & Mindfulness
-// games.js
-// ══════════════════════════════════════════
 
 document.addEventListener("DOMContentLoaded", () => {
   // ── SEARCH FILTER ──────────────────────
@@ -16,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ── PLAY NOW BUTTONS (games) ───────────
   document.querySelectorAll(".play-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const gameName = btn
@@ -39,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ── VIDEO CARDS (clicking anywhere) ────
   document.querySelectorAll(".video-card").forEach((card) => {
     card.style.cursor = "pointer";
     card.addEventListener("click", (e) => {
@@ -51,9 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ══════════════════════════════════════════
-// GAME MODAL
-// ══════════════════════════════════════════
+
 function openGameModal(gameName) {
   const existing = document.getElementById("gameModal");
   if (existing) existing.remove();
@@ -87,9 +79,8 @@ function openGameModal(gameName) {
   requestAnimationFrame(() => modal.classList.add("open"));
 }
 
-// ══════════════════════════════════════════
-// VIDEO MODAL
-// ══════════════════════════════════════════
+
+
 function openVideoModal(title, duration) {
   const existing = document.getElementById("videoModal");
   if (existing) existing.remove();
@@ -166,9 +157,8 @@ function tickVideo() {
   if (prog) prog.style.width = Math.min((videoSeconds / 300) * 100, 100) + "%";
 }
 
-// ══════════════════════════════════════════
-// MEMORY FOCUS GAME
-// ══════════════════════════════════════════
+
+
 function buildMemoryGame() {
   return `
     <p style="font-size:14px;color:#4a4a6a;margin-bottom:20px;line-height:1.6">
@@ -272,9 +262,9 @@ function memTileClick(i) {
   }
 }
 
-// ══════════════════════════════════════════
+
 // PUZZLE ESCAPE GAME
-// ══════════════════════════════════════════
+
 function buildPuzzleGame() {
   return `
     <p style="font-size:14px;color:#4a4a6a;margin-bottom:20px;line-height:1.6">
@@ -350,9 +340,8 @@ function shufflePuzzle() {
   renderPuzzle();
 }
 
-// ══════════════════════════════════════════
-// BREATHING RHYTHMS GAME
-// ══════════════════════════════════════════
+
+
 function buildBreathingGame() {
   return `
     <p style="font-size:14px;color:#4a4a6a;margin-bottom:24px;line-height:1.6;text-align:center">
@@ -460,9 +449,8 @@ function runBreathPhase() {
   }, phase.duration);
 }
 
-// ══════════════════════════════════════════
-// CLOSE MODAL
-// ══════════════════════════════════════════
+
+
 function closeModal(id) {
   stopBreathing();
   clearInterval(videoInterval);
@@ -475,16 +463,13 @@ function closeModal(id) {
   }
 }
 
-// Close on overlay click
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("mc-modal-overlay")) {
     closeModal(e.target.id);
   }
 });
 
-// ══════════════════════════════════════════
-// INJECT MODAL + VIDEO STYLES
-// ══════════════════════════════════════════
+
 const style = document.createElement("style");
 style.textContent = `
   .mc-modal-overlay {
@@ -558,14 +543,12 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Init puzzle on load in case game opens later
 window.initPuzzleIfNeeded = () => {
   if (document.getElementById("puzzleGrid") && puzzleState) {
     shufflePuzzle();
   }
 };
 
-// Auto-init puzzle when its modal opens
 const origOpenGameModal = openGameModal;
 window.openGameModal = function (name) {
   origOpenGameModal(name);

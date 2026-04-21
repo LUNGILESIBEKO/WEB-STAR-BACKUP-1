@@ -1,17 +1,12 @@
-/* ═══════════════════════════════════════════════════════
-   MindCare Hub – Mood & AI Insights
-   mood.js
-═══════════════════════════════════════════════════════ */
+
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ── 1. Nav active state ───────────────────────────────
   document.querySelectorAll(".nav-item").forEach((item) => {
     item.addEventListener("click", function (e) {
       if (this.getAttribute("href") === "#") e.preventDefault();
     });
   });
 
-  // ── 2. Crisis Call button ─────────────────────────────
   document
     .getElementById("crisisCallBtn")
     ?.addEventListener("click", function () {
@@ -24,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-  // ── 3. Emoji mood selector ────────────────────────────
   const emojiScores = { 2: 2, 4: 4, 6: 6, 8: 8, 10: 10 };
   const slider = document.getElementById("moodSlider");
   const sliderDisplay = document.getElementById("sliderDisplay");
@@ -41,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ── 4. Precision slider ───────────────────────────────
   function updateSlider(val) {
     sliderDisplay.textContent = `${val} / 10`;
     const pct = ((val - 1) / 9) * 100;
@@ -69,10 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSlider(parseInt(this.value));
   });
 
-  // Initialise slider fill on load
   updateSlider(parseInt(slider?.value || 6));
 
-  // ── 5. Log Reflection button ──────────────────────────
   let logged = false;
   document.getElementById("logBtn")?.addEventListener("click", function () {
     if (logged) return;
@@ -82,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
     this.style.background = "#16a34a";
     this.style.letterSpacing = "0.02em";
 
-    // Animate stat update
     setTimeout(() => {
       const statBig = document.querySelector(".stat-big");
       if (statBig) {
@@ -93,7 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 400);
   });
 
-  // ── 6. Bar / Line chart toggle ────────────────────────
   const barChart = document.getElementById("barChart");
   const lineChart = document.getElementById("lineChart");
   const barBtn = document.getElementById("barBtn");
@@ -113,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
     barBtn.classList.remove("active");
   });
 
-  // ── 7. Build bar chart ────────────────────────────────
   const moodData = [
     5, 6, 4, 7, 8, 6, 9, 7, 5, 6, 8, 7, 6, 8, 7, 9, 8, 6, 7, 5, 8, 9, 7, 8, 9,
     7, 6, 8,
@@ -139,7 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ── 8. Month picker ───────────────────────────────────
   const months = [
     "January 2026",
     "February 2026",
@@ -160,14 +147,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-  // ── 9. Export PDF button ──────────────────────────────
   document.getElementById("exportBtn")?.addEventListener("click", () => {
     alert(
       "📄 Clinical Summary PDF\n\nGenerating your report…\nThis would trigger a PDF download from the server.",
     );
   });
 
-  // ── 10. Pattern cards hover ───────────────────────────
   document.querySelectorAll(".pattern-card").forEach((card) => {
     card.addEventListener("click", function () {
       this.style.background = "#f7f4ff";
@@ -175,7 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ── 11. Entrance animations ───────────────────────────
   const fadeUp = (els, delay = 0, step = 80) => {
     els.forEach((el, i) => {
       el.style.opacity = "0";

@@ -1,17 +1,11 @@
-/* ═══════════════════════════════════════════════════════
-   MindCare Hub – Community Forum
-   forum.js
-═══════════════════════════════════════════════════════ */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ── 1. Nav items ──────────────────────────────────────
   document.querySelectorAll(".nav-item").forEach((item) => {
     item.addEventListener("click", function (e) {
       if (this.getAttribute("href") === "#") e.preventDefault();
     });
   });
 
-  // ── 2. Crisis Call button ─────────────────────────────
   document.getElementById("crisisCallBtn")?.addEventListener("click", () => {
     if (
       confirm(
@@ -22,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ── 3. Contact Crisis Line (top banner) ───────────────
   document.getElementById("contactCrisisBtn")?.addEventListener("click", () => {
     if (
       confirm(
@@ -33,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ── 4. Category filter pills ──────────────────────────
   const pills = document.querySelectorAll(".pill");
   const posts = document.querySelectorAll(".post-card");
 
@@ -61,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ── 5. Trending tag pills filter ─────────────────────
   document.querySelectorAll(".tag-pill").forEach((tag) => {
     tag.addEventListener("click", function () {
       const filter = this.dataset.filter || "all";
@@ -72,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ── 6. New Post modal ─────────────────────────────────
   const overlay = document.getElementById("modalOverlay");
   const newPostBtn = document.getElementById("newPostBtn");
   const modalClose = document.getElementById("modalClose");
@@ -89,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === overlay) closeModal();
   });
 
-  // Submit new post
   modalSubmit?.addEventListener("click", () => {
     const title = document.getElementById("postTitle")?.value.trim();
     const body = document.getElementById("postBody")?.value.trim();
@@ -100,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Create and prepend new post card
     const card = document.createElement("article");
     card.className = "post-card";
     card.dataset.category = category;
@@ -146,7 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
       card.style.transform = "";
     });
 
-    // Wire up actions on the new card
     wirePostActions(card);
 
     // Reset form
@@ -156,7 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
     closeModal();
   });
 
-  // ── 7. Wire post actions (like, bookmark) ─────────────
   function wirePostActions(scope) {
     scope.querySelectorAll(".like-btn").forEach((btn) => {
       btn.addEventListener("click", function () {
@@ -177,10 +163,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Wire all existing posts
   document.querySelectorAll(".post-card").forEach(wirePostActions);
 
-  // ── 8. Audio play button ──────────────────────────────
   document
     .getElementById("audioPlayBtn")
     ?.addEventListener("click", function () {
@@ -194,7 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-  // ── 9. Search ─────────────────────────────────────────
   document
     .getElementById("searchInput")
     ?.addEventListener("input", function () {
@@ -209,12 +192,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-  // ── 10. Find Local Center ─────────────────────────────
   document.querySelector(".find-center-btn")?.addEventListener("click", () => {
     window.open("https://findahelpline.com", "_blank");
   });
 
-  // ── 11. Entrance animations ───────────────────────────
   document.querySelectorAll(".post-card").forEach((card, i) => {
     card.style.opacity = "0";
     card.style.transform = "translateY(16px)";
@@ -228,7 +209,8 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 });
-// Modal
+
+
 const overlay = document.getElementById("modalOverlay");
 document
   .getElementById("newPostBtn")
@@ -243,7 +225,6 @@ overlay.addEventListener("click", (e) => {
   if (e.target === overlay) overlay.classList.remove("open");
 });
 
-// Filter pills
 document.querySelectorAll(".pill").forEach((pill) => {
   pill.addEventListener("click", () => {
     document

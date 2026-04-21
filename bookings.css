@@ -36,9 +36,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ══════════════════════════════════════════
-   SIDEBAR — identical to all other pages
-══════════════════════════════════════════ */
+
 .sidebar {
   width: var(--sidebar-width);
   background: var(--purple-sidebar);
@@ -149,9 +147,7 @@ body {
   stroke: #fff;
 }
 
-/* ══════════════════════════════════════════
-   MAIN
-══════════════════════════════════════════ */
+
 .main {
   margin-left: var(--sidebar-width);
   flex: 1;
@@ -516,8 +512,6 @@ body {
 }
 
 /* TIME SLOTS */
-.slots-wrap {
-}
 
 .slots-grid {
   display: grid;
@@ -864,7 +858,16 @@ body.dark {
   --text-light: #7a6a9a;
 }
 
-html.dark .sidebar { background: #1a0a3c; }
-html.dark nav { background: #1a1030; border-color: #2e2050; }
+html.dark .sidebar {
+  background: #1a0a3c;
+}
+html.dark nav {
+  background: #1a1030;
+  border-color: #2e2050;
+}
 html.dark .form-input,
-html.dark .form-select { background: #0f0a1e; color: #f0eeff; border-color: #2e2050; }
+html.dark .form-select {
+  background: #0f0a1e;
+  color: #f0eeff;
+  border-color: #2e2050;
+}

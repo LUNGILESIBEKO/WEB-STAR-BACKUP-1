@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ── 1. Nav items ──────────────────────────────────────
+  //  1. Nav items 
   document.querySelectorAll(".nav-item").forEach((item) => {
     item.addEventListener("click", function (e) {
       if (this.getAttribute("href") === "#") e.preventDefault();
     });
   });
 
-  // ── 2. Crisis Call button ─────────────────────────────
+  //  2. Crisis Call button 
   document.getElementById("crisisCallBtn")?.addEventListener("click", () => {
     if (
       confirm(
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ── 3. Set today's date ───────────────────────────────
+  //  3. Set today's date 
   const dateEl = document.getElementById("journalDate");
   if (dateEl) {
     const now = new Date();
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ── 4. Mood emoji selector ────────────────────────────
+  //  4. Mood emoji selector 
   document.querySelectorAll(".mood-emoji-btn").forEach((btn) => {
     btn.addEventListener("click", function () {
       document
@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // ── 5. Word counter ───────────────────────────────────
   const textarea = document.getElementById("journalTextarea");
   const wordCount = document.getElementById("wordCount");
 
@@ -91,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // ── 6. Live AI sentiment analysis ────────────────────
   const stressWords = [
     "anxious",
     "stress",
@@ -128,7 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
       alertBox.style.display = hasStress ? "" : "none";
     }
 
-    // Update tags based on content
     if (text.length > 20) {
       const tags = document.getElementById("sentimentTags");
       if (tags && hasStress && !hasPositive) {
@@ -139,7 +136,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // ── 7. Submit Entry ───────────────────────────────────
   document.getElementById("submitBtn")?.addEventListener("click", function () {
     const text = textarea?.value.trim();
     if (!text) {
@@ -211,7 +207,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ── 8. History entry click ────────────────────────────
   document.querySelectorAll(".history-entry").forEach((entry) => {
     entry.addEventListener("click", function () {
       document
@@ -222,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ── 9. Calendar nav ───────────────────────────────────
+  //  9. Calendar 
   const months = [
     "January",
     "February",
@@ -237,8 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "November",
     "December",
   ];
-  let currentMonthIdx = 2; // March
-
+  let currentMonthIdx = 2; 
   document.getElementById("calPrev")?.addEventListener("click", () => {
     currentMonthIdx = (currentMonthIdx - 1 + 12) % 12;
     updateCalMonth();
@@ -252,12 +246,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (el) el.textContent = `${months[currentMonthIdx]} 2026`;
   }
 
-  // ── 10. Box breathing link ────────────────────────────
   document.getElementById("boxBreathingLink")?.addEventListener("click", () => {
     window.location.href = "crisis.html";
   });
 
-  // ── 11. Bar chart animation on load ──────────────────
   document.querySelectorAll(".i-bar").forEach((bar, i) => {
     const h = bar.style.height;
     bar.style.height = "0%";
@@ -270,7 +262,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  // ── 12. Entrance animations ───────────────────────────
   [
     ".journal-card",
     ".ai-insights-card",

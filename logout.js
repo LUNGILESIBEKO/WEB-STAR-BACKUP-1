@@ -1,7 +1,7 @@
+
 document.addEventListener("DOMContentLoaded", () => {
-  // ── SESSION TIMER ───────────────────────
-  // Track how long the user has been on this page / simulate session time
-  const sessionStart = Date.now() - 42 * 60 * 1000; // simulate 42 min session
+  // ── SESSION TIMER ──
+  const sessionStart = Date.now() - 42 * 60 * 1000;
   const sessionInfoEl = document.getElementById("sessionInfo");
 
   function updateSessionTime() {
@@ -17,10 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   updateSessionTime();
-  setInterval(updateSessionTime, 30000); // update every 30s
+  setInterval(updateSessionTime, 30000);
 
-  // ── COUNTDOWN OVERLAY ───────────────────
-  // Create the countdown overlay dynamically
   const overlay = document.createElement("div");
   overlay.className = "countdown-overlay";
   overlay.id = "countdownOverlay";
@@ -31,28 +29,20 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
     <p class="countdown-msg" id="countdownMsg">Logging you out safely…</p>
     <button id="cancelCountdownBtn" style="
-      margin-top:10px;
-      background:rgba(255,255,255,0.12);
-      border:1px solid rgba(255,255,255,0.25);
-      border-radius:10px;
-      color:rgba(255,255,255,0.8);
-      font-size:13px;
-      font-weight:600;
-      font-family:'DM Sans',sans-serif;
-      padding:10px 24px;
-      cursor:pointer;
-      transition:background 0.15s;
-    ">Cancel</button>
-  `;
+      margin-top:10px;background:rgba(255,255,255,0.12);
+      border:1px solid rgba(255,255,255,0.25);border-radius:10px;
+      color:rgba(255,255,255,0.8);font-size:13px;font-weight:600;
+      font-family:'DM Sans',sans-serif;padding:10px 24px;cursor:pointer;">
+      Cancel
+    </button>`;
   document.body.appendChild(overlay);
 
   let countdownInterval = null;
   let countdownCancelled = false;
 
-  // ── LOG OUT BUTTON ───────────────────────
-  document.getElementById("logoutBtn")?.addEventListener("click", () => {
-    startLogoutCountdown();
-  });
+  document
+    .getElementById("logoutBtn")
+    ?.addEventListener("click", startLogoutCountdown);
 
   function startLogoutCountdown() {
     countdownCancelled = false;
@@ -61,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const numEl = document.getElementById("countdownNum");
     const msgEl = document.getElementById("countdownMsg");
-
     if (numEl) numEl.textContent = count;
     if (msgEl) msgEl.textContent = "Logging you out safely…";
 
@@ -71,9 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.classList.remove("show");
         return;
       }
-
       count--;
-
       if (numEl) numEl.textContent = count;
 
       if (count === 0) {
@@ -81,12 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (msgEl) msgEl.textContent = "Goodbye! Take care 👋";
         if (numEl) numEl.textContent = "✓";
 
-        // After brief pause, redirect to index/login
         setTimeout(() => {
           if (!countdownCancelled) {
-            // In production this would redirect to the login page
-            // window.location.href = 'index.html';
-            // For demo, show a confirmation message
             window.location.href = "landingpage.html";
           }
         }, 1200);
@@ -94,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1000);
   }
 
-  // Cancel countdown
   document
     .getElementById("cancelCountdownBtn")
     ?.addEventListener("click", () => {
@@ -103,21 +85,17 @@ document.addEventListener("DOMContentLoaded", () => {
       overlay.classList.remove("show");
     });
 
-  // ── STAY LOGGED IN BUTTON ────────────────
   document.getElementById("stayBtn")?.addEventListener("click", () => {
-    // Animate button
     const btn = document.getElementById("stayBtn");
     btn.textContent = "Taking you back…";
     btn.style.background = "var(--purple-xlight)";
     btn.style.borderColor = "var(--purple-sidebar-active)";
     btn.style.color = "var(--purple-sidebar-active)";
-
     setTimeout(() => {
       window.location.href = "dashboard.html";
     }, 600);
   });
 
-  // ── LOGGED OUT STATE ─────────────────────
   function showLoggedOutState() {
     const card = document.getElementById("logoutCard");
     if (!card) return;
@@ -151,20 +129,13 @@ document.addEventListener("DOMContentLoaded", () => {
           cursor:pointer;
           text-decoration:none;
           margin-bottom:24px;
-          transition:background 0.15s;
-        ">Return to Dashboard</a>
-        <p class="session-info">See you next time 👋</p>
-      `;
+          transition:background 0.15s;">
+          Return to Home
+        </a>
+        <p class="session-info">See you next time 👋</p>`;
 
       card.style.opacity = "1";
       card.style.transform = "scale(1)";
     }, 350);
   }
-
-  // ── SIDEBAR NAV — prevent default on # links ──
-  document.querySelectorAll(".nav-item").forEach((item) => {
-    item.addEventListener("click", function (e) {
-      if (this.getAttribute("href") === "#") e.preventDefault();
-    });
-  });
 });

@@ -35,9 +35,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ══════════════════════════════════════════
-   SIDEBAR — identical to all other pages
-══════════════════════════════════════════ */
+
 .sidebar {
   width: var(--sidebar-width);
   background: var(--purple-sidebar);
@@ -148,9 +146,7 @@ body {
   stroke: #fff;
 }
 
-/* ══════════════════════════════════════════
-   MAIN
-══════════════════════════════════════════ */
+
 .main {
   margin-left: var(--sidebar-width);
   flex: 1;
@@ -180,9 +176,7 @@ body {
   color: var(--text-light);
 }
 
-/* ══════════════════════════════════════════
-   SETTINGS GRID
-══════════════════════════════════════════ */
+
 .settings-grid {
   display: grid;
   grid-template-columns: 380px 1fr;
@@ -220,7 +214,6 @@ body {
   color: var(--text-dark);
 }
 
-/* TOGGLE ROWS */
 .toggle-row {
   display: flex;
   align-items: center;
@@ -277,7 +270,6 @@ body {
   transform: translateX(22px);
 }
 
-/* LEGAL ITEMS */
 .legal-item {
   width: 100%;
   display: flex;
@@ -302,7 +294,6 @@ body {
   color: var(--purple-sidebar-active);
 }
 
-/* THEME BUTTONS */
 .theme-btns {
   display: flex;
   gap: 10px;
@@ -335,7 +326,6 @@ body {
   color: var(--purple-sidebar-active);
 }
 
-/* FORM */
 .form-row {
   margin-bottom: 16px;
 }
@@ -436,7 +426,6 @@ body {
   text-decoration: underline;
 }
 
-/* NOTIFICATIONS */
 .notif-section {
   margin-top: 22px;
   margin-bottom: 22px;
@@ -500,7 +489,6 @@ body {
   color: var(--text-dark);
 }
 
-/* SAVE BUTTON */
 .save-btn {
   background: var(--purple-sidebar-active);
   color: white;
@@ -524,7 +512,6 @@ body {
   transform: translateY(0);
 }
 
-/* DATA CARD */
 .data-card {
   background: var(--purple-xlight);
   border-color: #ddd6fe;
@@ -596,9 +583,7 @@ body {
   background: #ffe0e0;
 }
 
-/* ══════════════════════════════════════════
-   MODAL
-══════════════════════════════════════════ */
+
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -723,7 +708,6 @@ body {
   margin-bottom: 16px;
 }
 
-/* TOAST */
 .toast {
   position: fixed;
   bottom: 28px;
@@ -755,9 +739,7 @@ body {
   background: var(--crisis-red);
 }
 
-/* ══════════════════════════════════════════
-   RESPONSIVE
-══════════════════════════════════════════ */
+
 @media (max-width: 1100px) {
   .settings-grid {
     grid-template-columns: 1fr;
@@ -784,7 +766,6 @@ body {
     flex-direction: column;
   }
 }
-/* DARK MODE */
 body.dark {
   --bg: #0f0a1e;
   --white: #1a1030;

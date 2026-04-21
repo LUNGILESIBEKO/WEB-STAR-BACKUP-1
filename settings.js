@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("lightModeBtn")?.classList.remove("active");
   }
 
-  // ── ENTRANCE ANIMATIONS ─────────────────
   document.querySelectorAll(".settings-card").forEach((card, i) => {
     setTimeout(
       () => {
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  // ── TOAST HELPER ────────────────────────
   function showToast(msg, type = "") {
     const toast = document.getElementById("toast");
     toast.textContent = msg;
@@ -27,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3200);
   }
 
-  // ── TOGGLE SWITCHES ─────────────────────
   document.querySelectorAll(".toggle-btn").forEach((btn) => {
     btn.addEventListener("click", function () {
       this.classList.toggle("on");
@@ -43,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ── THEME BUTTONS ────────────────────────
+  //  THEME BUTTONS 
   document.getElementById("lightModeBtn")?.addEventListener("click", () => {
     document.getElementById("lightModeBtn").classList.add("active");
     document.getElementById("darkModeBtn").classList.remove("active");
@@ -60,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showToast("Dark mode activated", "success");
   });
 
-  // ── CHANGE PASSWORD ──────────────────────
+  //  CHANGE PASSWORD 
   let pwVisible = false;
   document.getElementById("changePwBtn")?.addEventListener("click", () => {
     const input = document.getElementById("passwordInput");
@@ -82,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ── SAVE CHANGES ─────────────────────────
   document.getElementById("saveBtn")?.addEventListener("click", function () {
     const orig = this.textContent;
     this.textContent = "Saving…";
@@ -98,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 800);
   });
 
-  // ── LEGAL MODAL ──────────────────────────
   const legalContent = {
     privacyBtn: {
       title: "Privacy Policy",
@@ -148,7 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === legalModal) legalModal.classList.remove("open");
   });
 
-  // ── EXPORT DATA ──────────────────────────
   document.getElementById("exportBtn")?.addEventListener("click", function () {
     const orig = this.innerHTML;
     this.textContent = "Preparing…";
@@ -163,7 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1200);
   });
 
-  // ── DELETE ACCOUNT MODAL ─────────────────
   const deleteModal = document.getElementById("deleteModal");
 
   document.getElementById("deleteBtn")?.addEventListener("click", () => {
@@ -197,7 +190,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  // ── FORM VALIDATION ON SAVE ──────────────
   document.getElementById("emailInput")?.addEventListener("blur", function () {
     const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value);
     this.style.borderColor = valid ? "" : "#c8002b";

@@ -1,17 +1,12 @@
-/* ═══════════════════════════════════════════════════════
-   MindCare Hub – Find Help Near Me
-   findhelp.js
-═══════════════════════════════════════════════════════ */
-
 document.addEventListener("DOMContentLoaded", () => {
-  // ── 1. Nav items ──────────────────────────────────────
+  // ── 1. Nav items 
   document.querySelectorAll(".nav-item").forEach((item) => {
     item.addEventListener("click", function (e) {
       if (this.getAttribute("href") === "#") e.preventDefault();
     });
   });
 
-  // ── 2. Crisis Call button ─────────────────────────────
+  //  2. Crisis Call button 
   document.getElementById("crisisCallBtn")?.addEventListener("click", () => {
     if (
       confirm(
@@ -22,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ── 3. Filter tabs ────────────────────────────────────
+  //  3. Filter tabs 
   const tabs = document.querySelectorAll(".filter-tab");
   const cards = document.querySelectorAll(".service-card");
 
@@ -70,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ── 5. View Details buttons ───────────────────────────
+  // ── 5. View Details buttons 
   document.querySelectorAll(".view-details-btn").forEach((btn) => {
     btn.addEventListener("click", function () {
       const name =
@@ -83,14 +78,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ── 6. Start Chat button ──────────────────────────────
+  //  6. Start Chat button 
   document.getElementById("startChatBtn")?.addEventListener("click", () => {
     alert(
       "💬 Online Counselling SA\n\nA secure video therapy session would launch here when connected to the booking API.",
     );
   });
 
-  // ── 7. Nav direction buttons ──────────────────────────
+  //  7. Nav direction buttons 
   document.querySelectorAll(".nav-icon-btn").forEach((btn) => {
     btn.addEventListener("click", function () {
       const name =
@@ -103,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ── 8. Change Location ────────────────────────────────
+  //  8. Change Location 
   document
     .getElementById("changeLocationBtn")
     ?.addEventListener("click", () => {
@@ -118,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-  // ── 9. Directory centre buttons ───────────────────────
+  //  9. Directory centre buttons 
   document.querySelectorAll(".centre-btn").forEach((btn) => {
     btn.addEventListener("click", function () {
       // Briefly highlight
@@ -134,21 +129,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ── 10. Download Directory ────────────────────────────
+  //  10. Download Directory 
   document.getElementById("downloadBtn")?.addEventListener("click", () => {
     alert(
       "📄 Downloading UJ Wellness Directory (PDF)\n\nThis would trigger a PDF download from the server.",
     );
   });
 
-  // ── 11. Filter icon button ────────────────────────────
+  //  11. Filter icon button 
   document.getElementById("filterIconBtn")?.addEventListener("click", () => {
     alert(
       "⚙️ Advanced Filters\n\nOptions for distance, hours, language, and accessibility would appear here.",
     );
   });
 
-  // ── 12. Entrance animations ───────────────────────────
+  // ── 12. Entrance animations 
   // Service cards
   document.querySelectorAll(".service-card").forEach((card, i) => {
     card.style.opacity = "0";

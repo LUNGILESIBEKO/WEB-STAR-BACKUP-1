@@ -29,9 +29,9 @@ body {
   overflow-x: hidden;
 }
 
-/* ══════════════════════════════════════════
-   SIDEBAR — identical to all other pages
-══════════════════════════════════════════ */
+
+ 
+
 .sidebar {
   width: var(--sidebar-width);
   background: var(--purple-sidebar);
@@ -118,9 +118,8 @@ body {
 .sidebar-link:hover { background: var(--purple-sidebar-hover); color: #fff; }
 .sidebar-link:hover svg { stroke: #fff; }
 
-/* ══════════════════════════════════════════
-   MAIN
-══════════════════════════════════════════ */
+
+
 .main {
   margin-left: var(--sidebar-width);
   flex: 1;
@@ -129,7 +128,6 @@ body {
   min-height: 100vh;
 }
 
-/* CRISIS TOP BANNER */
 .crisis-top-banner {
   background: #fff0f0;
   border-bottom: 1.5px solid #ffd0da;
@@ -166,10 +164,8 @@ body {
 
 .contact-crisis-btn:hover { background: #a5001f; }
 
-/* PAGE BODY */
 .page-body { padding: 28px 28px 40px; flex: 1; }
 
-/* FORUM LAYOUT */
 .forum-layout {
   display: grid;
   grid-template-columns: 1fr 280px;
@@ -179,7 +175,6 @@ body {
 
 .forum-main { display: flex; flex-direction: column; }
 
-/* TITLE ROW */
 .forum-title-row { margin-bottom: 18px; }
 
 .forum-title {
@@ -203,7 +198,6 @@ body {
 .forum-meta-sep { color: var(--text-light); }
 .peers-online { font-size: 13px; color: var(--text-mid); font-weight: 500; }
 
-/* FILTERS */
 .filters-row {
   display: flex;
   align-items: center;
@@ -250,10 +244,8 @@ body {
 
 .new-post-btn:hover { background: var(--purple-mid); transform: translateY(-1px); }
 
-/* POSTS FEED */
 .posts-feed { display: flex; flex-direction: column; gap: 16px; }
 
-/* POST CARD */
 .post-card {
   background: var(--white);
   border: 1px solid var(--border);
@@ -335,7 +327,6 @@ body {
 
 .post-body { font-size: 14px; color: var(--text-mid); line-height: 1.7; margin-bottom: 18px; }
 
-/* AUDIO */
 .audio-attachment {
   display: flex;
   align-items: center;
@@ -362,7 +353,6 @@ body {
 .audio-title { font-size: 13px; font-weight: 600; color: var(--text-dark); margin-bottom: 2px; }
 .audio-meta  { font-size: 11px; color: var(--text-light); }
 
-/* POST FOOTER */
 .post-footer {
   display: flex;
   align-items: center;
@@ -402,9 +392,7 @@ body {
 
 .bookmark-btn:hover { background: var(--purple-xlight); color: var(--purple-sidebar-active); }
 
-/* ══════════════════════════════════════════
-   FORUM RIGHT SIDEBAR
-══════════════════════════════════════════ */
+
 .forum-sidebar {
   display: flex;
   flex-direction: column;
@@ -499,7 +487,6 @@ body {
 
 .find-center-btn:hover { background: #a5001f; }
 
-/* TRENDING */
 .trending-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .tag-pill {
@@ -516,7 +503,6 @@ body {
 
 .tag-pill:hover { background: var(--purple-light); color: var(--purple-sidebar-active); border-color: var(--purple-light); }
 
-/* ACTIVE NOW */
 .active-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
 .active-dot { width: 9px; height: 9px; border-radius: 50%; background: #22c55e; }
 .active-list { display: flex; flex-direction: column; gap: 12px; }
@@ -535,9 +521,8 @@ body {
 .av3 { background: #0284c7; }
 .active-name { font-size: 13px; font-weight: 600; color: var(--text-dark); }
 
-/* ══════════════════════════════════════════
-   MODAL
-══════════════════════════════════════════ */
+
+
 .modal-overlay {
   position: fixed; inset: 0;
   background: rgba(26,26,46,0.55);
@@ -629,9 +614,8 @@ body {
 
 .modal-submit:hover { background: var(--purple-mid); }
 
-/* ══════════════════════════════════════════
-   RESPONSIVE
-══════════════════════════════════════════ */
+
+
 @media (max-width: 1100px) {
   .forum-layout { grid-template-columns: 1fr; }
   .forum-sidebar { position: static; }

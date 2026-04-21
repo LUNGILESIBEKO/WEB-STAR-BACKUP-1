@@ -34,9 +34,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ══════════════════════════════════════════
-   SIDEBAR — identical to all other pages
-══════════════════════════════════════════ */
+
 .sidebar {
   width: var(--sidebar-width);
   background: var(--purple-sidebar);
@@ -158,9 +156,7 @@ body {
   stroke: #fff;
 }
 
-/* ══════════════════════════════════════════
-   MAIN — full-height centred stage
-══════════════════════════════════════════ */
+
 .main {
   margin-left: var(--sidebar-width);
   flex: 1;
@@ -180,7 +176,6 @@ body {
   padding: 40px 20px;
 }
 
-/* Decorative background book */
 .deco-book {
   position: absolute;
   bottom: 40px;
@@ -189,9 +184,7 @@ body {
   user-select: none;
 }
 
-/* ══════════════════════════════════════════
-   LOGOUT CARD
-══════════════════════════════════════════ */
+
 .logout-card {
   background: var(--white);
   border-radius: 20px;
@@ -215,7 +208,6 @@ body {
   }
 }
 
-/* Purple top accent bar */
 .card-accent {
   width: calc(100% + 80px);
   height: 5px;
@@ -230,7 +222,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Icon circle */
 .logout-icon {
   width: 60px;
   height: 60px;
@@ -261,7 +252,6 @@ body {
   margin-bottom: 32px;
 }
 
-/* BUTTONS */
 .logout-actions {
   display: flex;
   gap: 12px;
@@ -331,9 +321,7 @@ body {
   text-align: center;
 }
 
-/* ══════════════════════════════════════════
-   COUNTDOWN OVERLAY (shown on logout)
-══════════════════════════════════════════ */
+
 .countdown-overlay {
   position: fixed;
   inset: 0;
@@ -381,9 +369,7 @@ body {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* ══════════════════════════════════════════
-   RESPONSIVE
-══════════════════════════════════════════ */
+
 @media (max-width: 768px) {
   .sidebar {
     transform: translateX(-100%);

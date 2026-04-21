@@ -661,9 +661,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* ══════════════════════════════════════════
-   RESPONSIVE
-══════════════════════════════════════════ */
+
 @media (max-width: 1100px) {
   .map-services-grid {
     grid-template-columns: 1fr;

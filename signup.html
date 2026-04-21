@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MindCare Hub – Create Account</title>
+  <link rel="stylesheet" href="signup.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 8c-1.5 0-3 .5-3 2s1.5 2 3 2 3 .5 3 2-1.5 2-3 2"/>
+            <line x1="12" y1="6" x2="12" y2="8"/>
+            <line x1="12" y1="16" x2="12" y2="18"/>
+          </svg>
+        </div>
+        <span><em>MindCare Hub</em></span>
+      </div>
+
+      <div class="left-content">
+        <h1 class="hero-text">An Editorial Sanctuary for Academic Wellness.</h1>
+
+        <ul class="check-list">
+          <li>
+            <span class="check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            100% confidential
+          </li>
+          <li>
+            <span class="check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            AI-powered journaling
+          </li>
+          <li>
+            <span class="check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Find counselors near your campus
+          </li>
+          <li>
+            <span class="check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Connect with a safe student community
+          </li>
+          <li>
+            <span class="check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            24/7 crisis support
+          </li>
+        </ul>
+      </div>
+
+      <!-- Decorative blobs -->
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+      <div class="form-container">
+        <h2 class="form-title">Create Your Account</h2>
+        <p class="form-subtitle">Free forever. No credit card required.</p>
+
+        <!-- Anonymous toggle -->
+        <div class="anon-toggle">
+          <div class="anon-left">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b21a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+              <line x1="1" y1="1" x2="23" y2="23"/>
+            </svg>
+            <div>
+              <strong>Stay Anonymous</strong>
+              <span>Hide your identity in community forums</span>
+            </div>
+          </div>
+          <label class="toggle-switch" aria-label="Stay anonymous">
+            <input type="checkbox" id="anon-check" />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <!-- Name row -->
+        <div class="name-row">
+          <div class="field-group">
+            <label for="first-name">FIRST NAME</label>
+            <input type="text" id="first-name" placeholder="Thabo" autocomplete="given-name" />
+          </div>
+          <div class="field-group">
+            <label for="last-name">LAST NAME</label>
+            <input type="text" id="last-name" placeholder="Mokoena" autocomplete="family-name" />
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="field-group">
+          <label for="email">EMAIL ADDRESS</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <input type="email" id="email" placeholder="student@university.ac.za" autocomplete="email" />
+          </div>
+        </div>
+
+        <!-- University -->
+        <div class="field-group">
+          <label for="university">UNIVERSITY</label>
+          <div class="input-wrapper select-wrap">
+            <span class="input-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </span>
+            <select id="university">
+              <option value="" disabled selected>Select your university</option>
+              <option>University of Johannesburg</option>
+              <option>University of Pretoria</option>
+              <option>Wits University</option>
+              <option>UNISA</option>
+              <option>Rhodes University</option>
+              <option>UCT</option>
+              <option>Stellenbosch University</option>
+              <option>UKZN</option>
+              <option>North-West University</option>
+            </select>
+            <span class="select-arrow">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="field-group">
+          <label for="password">PASSWORD</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <input type="password" id="password" placeholder="••••••••••••" autocomplete="new-password" />
+            <button class="eye-btn" data-target="password" type="button" aria-label="Show password">
+              <svg class="eye-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <!-- Password strength bar -->
+          <div class="strength-bar" id="strength-bar">
+            <div class="strength-fill" id="strength-fill"></div>
+          </div>
+          <p class="strength-label" id="strength-label"></p>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="field-group">
+          <label for="confirm-password">CONFIRM PASSWORD</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <input type="password" id="confirm-password" placeholder="••••••••••••" autocomplete="new-password" />
+            <button class="eye-btn" data-target="confirm-password" type="button" aria-label="Show password">
+              <svg class="eye-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <button class="btn-primary" id="signup-btn" type="button">CREATE MY ACCOUNT</button>
+
+        <p class="switch-text">Already have an account? <a href="signin.html">Sign in</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>
