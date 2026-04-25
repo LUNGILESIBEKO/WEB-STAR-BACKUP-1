@@ -34,7 +34,9 @@ body {
   overflow-x: hidden;
 }
 
-
+/* ══════════════════════════════════════════
+   SIDEBAR — identical to all other pages
+══════════════════════════════════════════ */
 .sidebar {
   width: var(--sidebar-width);
   background: var(--purple-sidebar);
@@ -145,7 +147,9 @@ body {
   stroke: #fff;
 }
 
-
+/* ══════════════════════════════════════════
+   MAIN
+══════════════════════════════════════════ */
 .main {
   margin-left: var(--sidebar-width);
   flex: 1;
@@ -293,7 +297,7 @@ body {
   transform: translateY(-3px);
 }
 
-
+/* GAME THUMBNAILS */
 .game-thumb {
   height: 160px;
   position: relative;
@@ -367,6 +371,7 @@ body {
   }
 }
 
+/* Water ripple for Puzzle Escape */
 .water-ripple {
   width: 70px;
   height: 70px;
@@ -383,7 +388,7 @@ body {
     0 0 0 36px rgba(255, 255, 255, 0.02);
 }
 
-
+/* Sunset glow */
 .sunset-glow {
   width: 60px;
   height: 60px;
@@ -396,7 +401,7 @@ body {
   );
 }
 
-
+/* GAME INFO */
 .game-info {
   padding: 16px 18px 18px;
 }
@@ -483,7 +488,9 @@ body {
   transform: translateY(0);
 }
 
-
+/* ══════════════════════════════════════════
+   VIDEOS GRID
+══════════════════════════════════════════ */
 .videos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -577,7 +584,9 @@ body {
   line-height: 1.4;
 }
 
-
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
 @media (max-width: 1100px) {
   .games-grid {
     grid-template-columns: repeat(2, 1fr);

@@ -177,7 +177,7 @@
       </div>
     </aside>
 
-    <!--  MAIN  -->
+    <!-- ══════════════════════ MAIN ══════════════════════ -->
     <main class="main">
       <!-- TOPBAR -->
       <header class="topbar">
@@ -332,7 +332,11 @@
           <h2 class="section-title">Recommended Videos</h2>
 
           <div class="videos-grid">
-            <div class="video-card">
+            <!-- 1. 5-Minute Anxiety Release — https://youtu.be/MR57rug8NsM -->
+            <div
+              class="video-card"
+              data-url="https://youtu.be/MR57rug8NsM?si=W4syIkKqNfYPnkcQ"
+            >
               <div class="video-thumb v1">
                 <button class="play-circle">
                   <svg
@@ -353,7 +357,11 @@
               </div>
             </div>
 
-            <div class="video-card">
+            <!-- 2. Grounding Techniques for Students — https://youtu.be/30VMIEmA114 -->
+            <div
+              class="video-card"
+              data-url="https://youtu.be/30VMIEmA114?si=W9GVizAFXeRgF8qp"
+            >
               <div class="video-thumb v2">
                 <button class="play-circle">
                   <svg
@@ -374,7 +382,11 @@
               </div>
             </div>
 
-            <div class="video-card">
+            <!-- 3. Overcoming Exam Nerves — https://youtu.be/6Rg0mBkVAeo -->
+            <div
+              class="video-card"
+              data-url="https://youtu.be/6Rg0mBkVAeo?si=ay1q6peP8Rg4MIFP"
+            >
               <div class="video-thumb v3">
                 <button class="play-circle">
                   <svg
@@ -395,7 +407,11 @@
               </div>
             </div>
 
-            <div class="video-card">
+            <!-- 4. Deep Breathing for Exam Success — https://youtu.be/DbDoBzGY3vo -->
+            <div
+              class="video-card"
+              data-url="https://youtu.be/DbDoBzGY3vo?si=RoQMumlPXG0f0DYR"
+            >
               <div class="video-thumb v4">
                 <button class="play-circle">
                   <svg
@@ -416,7 +432,11 @@
               </div>
             </div>
 
-            <div class="video-card">
+            <!-- 5. Overcoming Procrastination — https://youtu.be/irp5ghCVNAM -->
+            <div
+              class="video-card"
+              data-url="https://youtu.be/irp5ghCVNAM?si=JwqQ3YGnFdsCkQVo"
+            >
               <div class="video-thumb v5">
                 <button class="play-circle">
                   <svg
@@ -437,7 +457,11 @@
               </div>
             </div>
 
-            <div class="video-card">
+            <!-- 6. Guided Mindfulness for Focus — https://youtu.be/ausxoXBrmWs -->
+            <div
+              class="video-card"
+              data-url="https://youtu.be/ausxoXBrmWs?si=l6pe0fhB_ARCQYzW"
+            >
               <div class="video-thumb v6">
                 <button class="play-circle">
                   <svg
@@ -463,5 +487,14 @@
     </main>
 
     <script src="games.js"></script>
+    <script>
+      // Video cards open YouTube directly
+      document.querySelectorAll(".video-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const url = card.getAttribute("data-url");
+          if (url) window.open(url, "_blank", "noopener,noreferrer");
+        });
+      });
+    </script>
   </body>
 </html>
